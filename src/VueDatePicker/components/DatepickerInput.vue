@@ -114,6 +114,13 @@
         ...AllProps,
     });
 
+    defineSlots<{
+        trigger: any;
+        ['dp-input'](): any;
+        ['clear-icon'](props: { clear: (ev?: Event) => void }): any;
+        ['input-icon'](): any;
+    }>();
+
     const {
         defaultedTextInput,
         defaultedAriaLabels,
